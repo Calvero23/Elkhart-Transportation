@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Schedule a Ride in Elkhart, IN | Elkhart Transportation</title>
+  <meta name="description" content="Schedule a ride or request a transportation quote in Elkhart, IN for taxi, medical, senior, airport, scheduled, and business rides." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/main.css" />
+  <link rel="stylesheet" href="../css/components.css" />
+</head>
+<body>
+  <header class="nav">
+    <div class="nav__inner container">
+      <a href="../../index.html" class="nav__logo">Elkhart Transportation</a>
+      <nav class="nav__links">
+        <a href="services.html">Services</a>
+        <a href="nemt.html">Medical Rides</a>
+        <a href="factory-transport.html">Business Transport</a>
+        <a href="about.html">About</a>
+        <a href="contact.html" class="btn btn--primary">Schedule a Ride</a>
+      </nav>
+      <button class="nav__toggle" aria-label="Toggle menu">&#9776;</button>
+    </div>
+  </header>
+
+  <main>
+    <section class="page-hero">
+      <div class="container page-hero__inner">
+        <p class="eyebrow">Contact and Scheduling</p>
+        <h1>Schedule a ride in Elkhart or request a transportation quote.</h1>
+        <p>Use this page for local taxi rides, scheduled pickups, medical appointments, senior transportation, airport transfers, and business or facility transportation requests.</p>
+        <div class="page-hero__actions">
+          <a href="tel:+15742064245" class="btn btn--primary btn--lg">Call 574-206-4245</a>
+          <a href="#ride-request" class="btn btn--outline btn--lg">Request Online</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="page-section">
+      <div class="container contact-layout">
+        <aside class="contact-panel">
+          <h2>Call for the fastest response.</h2>
+          <p>For same-day rides, airport pickups, medical appointment transportation, and time-sensitive trips, calling is usually the clearest way to confirm availability.</p>
+          <dl class="detail-list">
+            <div>
+              <dt>Phone</dt>
+              <dd><a href="tel:+15742064245">574-206-4245</a></dd>
+            </div>
+            <div>
+              <dt>Email</dt>
+              <dd><a href="mailto:elkhartaxiservice@gmail.com">elkhartaxiservice@gmail.com</a></dd>
+            </div>
+            <div>
+              <dt>Primary Area</dt>
+              <dd>Elkhart, Goshen, Mishawaka, South Bend, Granger, and nearby Northern Indiana communities</dd>
+            </div>
+            <div>
+              <dt>Scheduling Expectation</dt>
+              <dd>Online requests are reviewed and confirmed before departure.</dd>
+            </div>
+          </dl>
+          <div class="notice">
+            <strong>Important:</strong> A form submission does not confirm a ride. Wait for a call, text, or email confirmation.
+          </div>
+        </aside>
+
+        <form class="form-card js-contact-form" id="ride-request" action="https://formspree.io/f/YOUR_FORM_ID" method="post">
+          <h2>Ride request form</h2>
+          <p class="form-intro">Share the details below so dispatch can confirm timing, pricing, route needs, and driver availability.</p>
+          <div class="form-grid">
+            <div class="form-group">
+              <label for="name">Name</label>
+              <input type="text" id="name" name="name" autocomplete="name" required />
+            </div>
+            <div class="form-group">
+              <label for="phone">Phone number</label>
+              <input type="tel" id="phone" name="phone" autocomplete="tel" required />
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="pickup">Pickup address</label>
+            <input type="text" id="pickup" name="pickup" autocomplete="street-address" required />
+          </div>
+          <div class="form-group">
+            <label for="dropoff">Drop-off address</label>
+            <input type="text" id="dropoff" name="dropoff" required />
+          </div>
+          <div class="form-grid">
+            <div class="form-group">
+              <label for="date">Date</label>
+              <input type="date" id="date" name="date" required />
+            </div>
+            <div class="form-group">
+              <label for="time">Time</label>
+              <input type="time" id="time" name="time" required />
+            </div>
+          </div>
+          <div class="form-grid">
+            <div class="form-group">
+              <label for="ride-type">Ride type</label>
+              <select id="ride-type" name="ride-type" required>
+                <option value="">Select a ride type</option>
+                <option>Local Taxi</option>
+                <option>Scheduled Ride</option>
+                <option>Airport</option>
+                <option>Medical Appointment</option>
+                <option>Senior Transportation</option>
+                <option>Factory/Business</option>
+                <option>Other</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="passengers">Number of passengers</label>
+              <input type="number" id="passengers" name="passengers" min="1" max="12" value="1" />
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="notes">Notes or special needs</label>
+            <textarea id="notes" name="notes" placeholder="Appointment time, return ride, luggage, billing needs, mobility notes, or other details."></textarea>
+          </div>
+          <label class="checkbox-line">
+            <input type="checkbox" name="consent" required />
+            <span>I agree to be contacted about this transportation request.</span>
+          </label>
+          <button type="submit" class="btn btn--primary btn--lg">Submit Ride Request</button>
+          <p class="form-status" aria-live="polite"></p>
+        </form>
+      </div>
+    </section>
+
+    <section class="page-section page-section--muted" id="business-inquiry">
+      <div class="container split-section">
+        <div>
+          <p class="eyebrow">Business and Facility Transportation</p>
+          <h2>Need recurring rides, account billing, or facility coordination?</h2>
+          <p>Use this inquiry path for factories, hotels, medical offices, senior communities, rehabilitation centers, HR teams, and other organizations that need dependable scheduled transportation.</p>
+          <ul class="check-list">
+            <li>Recurring ride coordination</li>
+            <li>Airport, hotel, and factory visitor pickups</li>
+            <li>Medical or senior transportation requests</li>
+            <li>Billing and invoicing discussion</li>
+          </ul>
+        </div>
+
+        <form class="form-card js-contact-form" action="https://formspree.io/f/YOUR_FORM_ID" method="post">
+          <h3>Business inquiry</h3>
+          <div class="form-group">
+            <label for="organization">Organization name</label>
+            <input type="text" id="organization" name="organization" />
+          </div>
+          <div class="form-grid">
+            <div class="form-group">
+              <label for="contact-person">Contact person</label>
+              <input type="text" id="contact-person" name="contact-person" autocomplete="name" required />
+            </div>
+            <div class="form-group">
+              <label for="business-phone">Phone</label>
+              <input type="tel" id="business-phone" name="business-phone" autocomplete="tel" required />
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="business-email">Email</label>
+            <input type="email" id="business-email" name="business-email" autocomplete="email" />
+          </div>
+          <div class="form-group">
+            <label for="transportation-need">Type of transportation needed</label>
+            <input type="text" id="transportation-need" name="transportation-need" placeholder="Example: weekly appointments, airport pickups, factory visitor rides" />
+          </div>
+          <div class="form-group">
+            <label for="frequency">Estimated ride frequency</label>
+            <select id="frequency" name="frequency">
+              <option value="">Select frequency</option>
+              <option>One-time request</option>
+              <option>Weekly</option>
+              <option>Several times per week</option>
+              <option>Daily or near-daily</option>
+              <option>Not sure yet</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="billing">Billing or invoicing needs</label>
+            <textarea id="billing" name="billing" placeholder="Tell us whether you need receipts, account billing, recurring invoices, or other documentation."></textarea>
+          </div>
+          <button type="submit" class="btn btn--primary">Send Business Inquiry</button>
+          <p class="form-status" aria-live="polite"></p>
+        </form>
+      </div>
+    </section>
+
+    <section class="page-section">
+      <div class="container">
+        <h2 class="section-title">Before you request a ride</h2>
+        <div class="info-grid">
+          <div class="info-card">
+            <h3>Have addresses ready</h3>
+            <p>Full pickup and drop-off addresses help dispatch quote the trip and avoid delays.</p>
+          </div>
+          <div class="info-card">
+            <h3>Schedule important rides early</h3>
+            <p>Medical appointments, airport trips, early morning pickups, and return rides should be requested as far ahead as practical.</p>
+          </div>
+          <div class="info-card">
+            <h3>Share special details</h3>
+            <p>Tell us about appointment times, wait-time needs, return ride plans, luggage, mobility assistance, or billing requirements.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <a href="tel:+15742064245" class="sticky-call">Call 574-206-4245</a>
+
+  <footer class="footer">
+    <div class="container footer__grid">
+      <div>
+        <strong>Elkhart Transportation</strong>
+        <p>Elkhart, IN 46516</p>
+        <p><a href="tel:+15742064245">574-206-4245</a></p>
+        <p><a href="mailto:elkhartaxiservice@gmail.com">elkhartaxiservice@gmail.com</a></p>
+      </div>
+      <div>
+        <strong>Services</strong>
+        <a href="services.html">All Services</a>
+        <a href="nemt.html">Medical Transportation</a>
+        <a href="scheduled-rides.html">Scheduled Rides</a>
+        <a href="contact.html">Schedule a Ride</a>
+      </div>
+      <div>
+        <strong>Service Areas</strong>
+        <p>Elkhart, Goshen, Mishawaka, South Bend, Granger, Nappanee, Bristol, Middlebury, Osceola, and nearby Northern Indiana.</p>
+      </div>
+      <div>
+        <strong>Hours</strong>
+        <p>Call for current availability. Scheduled rides should be requested as early as practical.</p>
+      </div>
+    </div>
+    <p class="footer__copy">&copy; 2026 Elkhart Transportation. All rights reserved.</p>
+  </footer>
+
+  <script src="../js/main.js"></script>
+  <script src="../js/booking.js"></script>
+</body>
+</html>

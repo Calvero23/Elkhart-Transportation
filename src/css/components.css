@@ -1,0 +1,226 @@
+/* =============================================
+   ELKHART TRANSPORTATION — components.css
+   Nav, footer, cards, form components
+   ============================================= */
+
+/* --- Nav --- */
+.nav {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: rgba(255,255,255,0.96);
+  height: var(--nav-h);
+  border-bottom: 1px solid var(--gray-200);
+  box-shadow: 0 2px 12px rgba(31,37,34,0.06);
+}
+.nav__inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 100%;
+}
+.nav__logo {
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: var(--navy);
+  letter-spacing: -0.02em;
+}
+.nav__links {
+  display: flex;
+  align-items: center;
+  gap: 22px;
+}
+.nav__links a {
+  color: var(--gray-500);
+  font-weight: 500;
+  font-size: 15px;
+  transition: color 0.15s;
+}
+.nav__links a:hover { color: var(--gold); }
+.nav__links .btn {
+  color: var(--white);
+  margin-left: 0;
+  padding: 10px 16px;
+}
+.nav__links .btn--outline-dark {
+  background: transparent;
+  color: var(--navy);
+}
+.nav__toggle {
+  display: none;
+  background: none;
+  border: none;
+  color: var(--navy);
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+@media (max-width: 768px) {
+  .nav__links { display: none; flex-direction: column; }
+  .nav__links.open {
+    display: flex;
+    position: absolute;
+    top: var(--nav-h);
+    left: 0; right: 0;
+    background: var(--white);
+    padding: 24px;
+    gap: 20px;
+    box-shadow: var(--shadow-lg);
+  }
+  .nav__toggle { display: block; }
+  .footer__grid,
+  .footer__grid--extended {
+    grid-template-columns: 1fr;
+  }
+  .footer__top {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+  .footer__phone {
+    white-space: normal;
+  }
+}
+
+/* --- Card --- */
+.card {
+  background: var(--white);
+  border: 1px solid var(--gray-200);
+  border-radius: var(--radius);
+  padding: 32px 28px;
+  box-shadow: var(--shadow);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-lg);
+}
+.card__icon { font-size: 2.2rem; margin-bottom: 16px; }
+.card h3 {
+  font-size: 1.15rem;
+  font-weight: 700;
+  margin-bottom: 12px;
+  color: var(--navy);
+}
+.card p {
+  color: var(--gray-500);
+  font-size: 15px;
+  line-height: 1.65;
+  margin-bottom: 20px;
+}
+.card__link {
+  color: var(--gold);
+  font-weight: 600;
+  font-size: 14px;
+  letter-spacing: 0.02em;
+  transition: color 0.15s;
+}
+.card__link:hover { color: var(--navy); }
+
+/* --- Footer --- */
+.footer {
+  background: var(--navy);
+  color: rgba(255,255,255,0.74);
+  padding: 56px 24px 34px;
+}
+.footer--extended {
+  padding-top: 48px;
+}
+.footer__top {
+  align-items: end;
+  border-bottom: 1px solid rgba(255,255,255,0.12);
+  display: flex;
+  gap: 28px;
+  justify-content: space-between;
+  margin-bottom: 32px;
+  padding-bottom: 28px;
+}
+.footer__top p {
+  max-width: 560px;
+}
+.footer__phone {
+  color: #9AC4A9;
+  display: block;
+  font-size: clamp(2rem, 5vw, 3.4rem);
+  font-weight: 800;
+  line-height: 1;
+  white-space: nowrap;
+}
+.footer__grid {
+  display: grid;
+  gap: 28px;
+  grid-template-columns: 1.1fr 0.8fr 1.2fr 1fr;
+}
+.footer__grid--extended {
+  grid-template-columns: 1fr 1.15fr 1.2fr 1fr 1.2fr;
+}
+.footer strong {
+  color: var(--white);
+  display: block;
+  margin-bottom: 12px;
+}
+.footer p,
+.footer a {
+  display: block;
+  font-size: 15px;
+  margin-bottom: 8px;
+}
+.footer a { color: #9AC4A9; }
+.footer a:hover { text-decoration: underline; }
+.footer__inner p { margin-bottom: 8px; font-size: 15px; }
+.footer__inner a { color: var(--gold); }
+.footer__inner a:hover { text-decoration: underline; }
+.footer__copy {
+  border-top: 1px solid rgba(255,255,255,0.12);
+  color: rgba(255,255,255,0.45);
+  font-size: 13px;
+  margin: 34px auto 0;
+  max-width: var(--container);
+  padding-top: 20px;
+  text-align: center;
+}
+
+/* --- Contact Form --- */
+.form-group {
+  margin-bottom: 20px;
+}
+.form-group label {
+  display: block;
+  font-weight: 600;
+  font-size: 14px;
+  color: var(--navy);
+  margin-bottom: 6px;
+}
+.form-group input,
+.form-group select,
+.form-group textarea {
+  width: 100%;
+  padding: 12px 16px;
+  border: 1.5px solid var(--gray-200);
+  border-radius: var(--radius);
+  font-family: var(--font);
+  font-size: 15px;
+  color: var(--navy);
+  background: var(--white);
+  transition: border-color 0.15s;
+}
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+  outline: none;
+  border-color: var(--gold);
+}
+.form-group textarea { min-height: 120px; resize: vertical; }
+
+@media (max-width: 768px) {
+  .footer__grid,
+  .footer__grid--extended {
+    grid-template-columns: 1fr;
+  }
+  .footer__top {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+  .footer__phone {
+    white-space: normal;
+  }
+}
