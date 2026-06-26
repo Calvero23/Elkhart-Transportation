@@ -30,6 +30,11 @@
 .top-strip a:hover {
   color: var(--white);
 }
+.top-strip__region {
+  font-style: italic;
+  font-weight: 400;
+  letter-spacing: 0;
+}
 .top-strip__alert {
   background: rgba(255,255,255,0.1);
   border-radius: 999px;
@@ -51,18 +56,23 @@
 }
 .nav__logo {
   display: grid;
-  font-size: 0.76rem;
+  gap: 4px;
   font-weight: 800;
   color: var(--navy);
-  letter-spacing: 0.1em;
   line-height: 1;
-  text-transform: uppercase;
 }
 .nav__logo strong {
   font-size: 1.32rem;
-  letter-spacing: -0.03em;
-  margin-top: 4px;
+  letter-spacing: 0;
   text-transform: none;
+}
+.nav__tagline {
+  color: var(--gray-500);
+  font-family: var(--font);
+  font-size: 0.78rem;
+  font-style: italic;
+  font-weight: 600;
+  letter-spacing: 0;
 }
 .nav__links {
   display: flex;
